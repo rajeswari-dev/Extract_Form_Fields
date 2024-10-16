@@ -22,14 +22,18 @@ const upload = multer({ dest: 'uploads/' });
 
 const getText = (element) => {
     var text = "";
-    if (element.childNodes.nodeType === 3) {
-        text += element.childNodes.nodeValue;
-    } else {
-        text = ""
-    }
+    element.childNodes.forEach((node) => {
+        if (node.nodeType === 3) {
+            text += node.nodeValue.trim();
+        }
+    })
     return text;
 }
 
+const parentNodes = () => {
+    const parent = Array.from(allElements).filter((element) => element.children.length > 0);
+    return parent;
+}
 
 app.post('/api/upload', upload.array('files'), async (req, res) => {
     try {
@@ -40,6 +44,7 @@ app.post('/api/upload', upload.array('files'), async (req, res) => {
                 const dom = new JSDOM(htmlContent);
 
                 const allElements = Array.from(dom.window.document.querySelectorAll('form *'));
+                const parentElements = parentNodes();
 
                 const elements = allElements.map((element) => (
                     {
@@ -50,7 +55,7 @@ app.post('/api/upload', upload.array('files'), async (req, res) => {
                             return attrs;
                         }, {})
                     }))
-                console.log(elements)
+                console.log(elements);
                 const jsonFilePath = path.join('json_output', path.basename(file.originalname, 'html') + 'json');
                 fs.writeFileSync(jsonFilePath, JSON.stringify(elements, null, 2));
 

@@ -1,0 +1,105 @@
+[
+  {
+    "tag": "h1",
+    "text": "Create a free account",
+    "attributes": {}
+  },
+  {
+    "tag": "fieldset",
+    "text": "",
+    "attributes": {}
+  },
+  {
+    "tag": "legend",
+    "text": "",
+    "attributes": {}
+  },
+  {
+    "tag": "h3",
+    "text": "Account Details",
+    "attributes": {}
+  },
+  {
+    "tag": "div",
+    "text": "",
+    "attributes": {
+      "class": "account-details"
+    }
+  },
+  {
+    "tag": "div",
+    "text": "",
+    "attributes": {}
+  },
+  {
+    "tag": "label",
+    "text": "Email*",
+    "attributes": {}
+  },
+  {
+    "tag": "input",
+    "text": "",
+    "attributes": {
+      "type": "text",
+      "name": "name",
+      "required": ""
+    }
+  },
+  {
+    "tag": "div",
+    "text": "",
+    "attributes": {}
+  },
+  {
+    "tag": "label",
+    "text": "Password*",
+    "attributes": {}
+  },
+  {
+    "tag": "input",
+    "text": "",
+    "attributes": {
+      "type": "password",
+      "name": "name",
+      "required": ""
+    }
+  },
+  {
+    "tag": "div",
+    "text": "",
+    "attributes": {}
+  },
+  {
+    "tag": "label",
+    "text": "Repeat email*",
+    "attributes": {}
+  },
+  {
+    "tag": "input",
+    "text": "",
+    "attributes": {
+      "type": "text",
+      "name": "name",
+      "required": ""
+    }
+  },
+  {
+    "tag": "div",
+    "text": "",
+    "attributes": {}
+  },
+  {
+    "tag": "label",
+    "text": "Repeat password*",
+    "attributes": {}
+  },
+  {
+    "tag": "input",
+    "text": "",
+    "attributes": {
+      "type": "password",
+      "name": "name",
+      "required": ""
+    }
+  }
+]
