@@ -30,9 +30,21 @@ const getText = (element) => {
     return text;
 }
 
-const parentNodes = () => {
-    const parent = Array.from(allElements).filter((element) => element.children.length > 0);
-    return parent;
+const childInfo = (element) => {
+    // const parent = Array.from(allElements).filter((element) => element.children.length > 0);
+    // return parent;
+    if (element.children.length > 1) {
+        var childElements = Array.from(element.children).map((element) => ({
+            tag: element.tagName.toLowerCase(),
+            text: getText(element),
+            attributes: Array.from(element.attributes).reduce((attrs, attr) => {
+                attrs[attr.name] = attr.value;
+                return attrs;
+            }, {}),
+            //elements: childInfo(element.children),
+        }))
+    }
+    return childElements;
 }
 
 app.post('/api/upload', upload.array('files'), async (req, res) => {
@@ -44,7 +56,7 @@ app.post('/api/upload', upload.array('files'), async (req, res) => {
                 const dom = new JSDOM(htmlContent);
 
                 const allElements = Array.from(dom.window.document.querySelectorAll('form *'));
-                const parentElements = parentNodes();
+                // const parentElements = parentNodes();
 
                 const elements = allElements.map((element) => (
                     {
@@ -53,7 +65,8 @@ app.post('/api/upload', upload.array('files'), async (req, res) => {
                         attributes: Array.from(element.attributes).reduce((attrs, attr) => {
                             attrs[attr.name] = attr.value;
                             return attrs;
-                        }, {})
+                        }, {}),
+                        elements: childInfo(element),
                     }))
                 console.log(elements);
                 const jsonFilePath = path.join('json_output', path.basename(file.originalname, 'html') + 'json');

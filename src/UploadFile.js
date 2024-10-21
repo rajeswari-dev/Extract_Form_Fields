@@ -32,8 +32,7 @@ export default function UploadFile() {
             {/* to choose the directory which have html/aspx files */}
             <input type="file" directory="" webkitdirectory="" multiple onChange={handleFileChange} />
             <br />
-            <br />
-            <button type='submit' onClick={uploadTheFile}>File upload</button>
+            <button type='submit' onClick={uploadTheFile} >File upload</button>
         </>
     )
 }

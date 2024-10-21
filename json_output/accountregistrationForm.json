@@ -7,7 +7,21 @@
   {
     "tag": "fieldset",
     "text": "",
-    "attributes": {}
+    "attributes": {},
+    "elements": [
+      {
+        "tag": "legend",
+        "text": "",
+        "attributes": {}
+      },
+      {
+        "tag": "div",
+        "text": "",
+        "attributes": {
+          "class": "account-details"
+        }
+      }
+    ]
   },
   {
     "tag": "legend",
@@ -24,12 +38,50 @@
     "text": "",
     "attributes": {
       "class": "account-details"
-    }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": "",
+        "attributes": {}
+      },
+      {
+        "tag": "div",
+        "text": "",
+        "attributes": {}
+      },
+      {
+        "tag": "div",
+        "text": "",
+        "attributes": {}
+      },
+      {
+        "tag": "div",
+        "text": "",
+        "attributes": {}
+      }
+    ]
   },
   {
     "tag": "div",
     "text": "",
-    "attributes": {}
+    "attributes": {},
+    "elements": [
+      {
+        "tag": "label",
+        "text": "Email*",
+        "attributes": {}
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "attributes": {
+          "type": "text",
+          "name": "name",
+          "required": ""
+        }
+      }
+    ]
   },
   {
     "tag": "label",
@@ -48,7 +100,23 @@
   {
     "tag": "div",
     "text": "",
-    "attributes": {}
+    "attributes": {},
+    "elements": [
+      {
+        "tag": "label",
+        "text": "Password*",
+        "attributes": {}
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "attributes": {
+          "type": "password",
+          "name": "name",
+          "required": ""
+        }
+      }
+    ]
   },
   {
     "tag": "label",
@@ -67,7 +135,23 @@
   {
     "tag": "div",
     "text": "",
-    "attributes": {}
+    "attributes": {},
+    "elements": [
+      {
+        "tag": "label",
+        "text": "Repeat email*",
+        "attributes": {}
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "attributes": {
+          "type": "text",
+          "name": "name",
+          "required": ""
+        }
+      }
+    ]
   },
   {
     "tag": "label",
@@ -86,7 +170,23 @@
   {
     "tag": "div",
     "text": "",
-    "attributes": {}
+    "attributes": {},
+    "elements": [
+      {
+        "tag": "label",
+        "text": "Repeat password*",
+        "attributes": {}
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "attributes": {
+          "type": "password",
+          "name": "name",
+          "required": ""
+        }
+      }
+    ]
   },
   {
     "tag": "label",
